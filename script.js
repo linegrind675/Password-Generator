@@ -132,6 +132,7 @@ var lowerCaseCharacters = [
         hasUpperCaseCharacters: hasUpperCaseCharacters,
         hasNumericCharacters: hasNumericCharacters,
         hasSpecialCharacters: hasSpecialCharacters,
+        length: length,
     };
 
     return passwordOptn;
