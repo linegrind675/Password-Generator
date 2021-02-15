@@ -152,6 +152,26 @@ var lowerCaseCharacters = [
       var possibleCharacters = [];
 
       var definiteCharacters = [];
+
+      if (options.hasLowerCaseCharacters) {
+          definiteCharacters.push(getRandom(lowerCaseCharacters));
+          possibleCharacters = possibleCharacters.concat(lowerCaseCharacters);
+      }
+
+      if (options.hasUpperCaseCharacters) {
+          definiteCharacters.push(getRandom(upperCaseCharacters));
+          possibleCharacters = possibleCharacters.concat(upperCaseCharacters);
+      }
+
+      if (options.hasNumericCharacters) {
+          definiteCharacters.push(getRandom(numericCharacters));
+          possibleCharacters = possibleCharacters.concat(numericCharacters);
+      }
+
+      if (options.hasSpecialCharacters) {
+          definiteCharacters.push(getRandom(specialCharacters));
+          possibleCharacters = possibleCharacters.concat(specialCharacters);
+      }
   }
 
 
