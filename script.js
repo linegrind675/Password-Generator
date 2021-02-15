@@ -172,7 +172,19 @@ var lowerCaseCharacters = [
           definiteCharacters.push(getRandom(specialCharacters));
           possibleCharacters = possibleCharacters.concat(specialCharacters);
       }
-  }
+
+      for (var i = 0; i < options.length; i++) {
+          var possibleCharacter = getRandom(possibleCharacters);
+
+          result.push(possibleCharacter);
+      }
+
+      for (var i = 0; i < definiteCharacters.length; i++) {
+          result[i] = definiteCharacters[i];
+      }
+
+      return result.join('');
+  };
 
 
   // Get references to the #generate element
@@ -185,7 +197,7 @@ var lowerCaseCharacters = [
   
     passwordText.value = password;
   
-  }
+  };
   
   // Add event listener to generate button
   generateBtn.addEventListener("click", writePassword);
