@@ -98,9 +98,43 @@ var lowerCaseCharacters = [
   
   function getPasswordOptn() {
     
+    var length = parseInt(prompt('How many characters should your password have?'));
+
+    if (length < 8) {
+        alert('Password must contain at least 8 characters');
+        return;
+    }
+
+    if (length > 128) {
+        alert('Password must contain less than 128 characters');
+        return;
+    }
+
+    if (isNaN(length) === true) {
+        alert('Password must be written as a number')
+        return;
+    }
+
+    var hasLowerCaseCharacters = confirm('Click OK to comfirm using lowercase characters');
+
+    var hasUpperCaseCharacters = confirm('Click OK to confirm using uppercare characters');
+
+    var hasNumericCharacters = confirm('Click OK to confirm using numeric characters');
+
+    var hasSpecialCharacters = confirm('Click OK to confirm using special characters');
+  };
+  
+  function generatePassword() {
+      var options = getPasswordOptn();
+
+      var result = [];
+
+      var possibleCharacters = [];
+
+      var definiteCharacters = [];
   }
-  
-  
+
+
   // Get references to the #generate element
   var generateBtn = document.querySelector("#generate");
   
