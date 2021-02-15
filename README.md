@@ -13,3 +13,5 @@
 * Use a function of generatePassword to generate variables and if statements to determine what characters will be used to generate the new password.
 
 * Use foor loops to reference the password length, and grabbing random characters from the variables at the beginning of the code.
+
+https://linegrind675.github.io/Password-Generator/
