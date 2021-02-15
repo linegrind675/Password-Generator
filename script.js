@@ -92,7 +92,6 @@ var lowerCaseCharacters = [
     '_',
     '.',
     '/',
-    '\\',
     '?'
   ];
   
@@ -117,11 +116,25 @@ var lowerCaseCharacters = [
 
     var hasLowerCaseCharacters = confirm('Click OK to comfirm using lowercase characters');
 
-    var hasUpperCaseCharacters = confirm('Click OK to confirm using uppercare characters');
+    var hasUpperCaseCharacters = confirm('Click OK to confirm using uppercase characters');
 
     var hasNumericCharacters = confirm('Click OK to confirm using numeric characters');
 
     var hasSpecialCharacters = confirm('Click OK to confirm using special characters');
+
+    if (hasLowerCaseCharacters === false && hasUpperCaseCharacters === false && hasNumericCharacters === false && hasSpecialCharacters === false) {
+        alert('You need to pick at least one type of character');
+        return;
+    }
+
+    var passwordOptn = {
+        hasLowerCaseCharacters: hasLowerCaseCharacters,
+        hasUpperCaseCharacters: hasUpperCaseCharacters,
+        hasNumericCharacters: hasNumericCharacters,
+        hasSpecialCharacters: hasSpecialCharacters,
+    };
+
+    return passwordOptn;
   };
   
   function generatePassword() {
