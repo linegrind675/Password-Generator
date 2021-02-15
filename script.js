@@ -136,6 +136,13 @@ var lowerCaseCharacters = [
 
     return passwordOptn;
   };
+
+  function getRandom(i) {
+      var randomIndex = Math.floor(Math.random() * i.length);
+      var randomElement = i[randomIndex];
+
+      return randomElement;
+  }
   
   function generatePassword() {
       var options = getPasswordOptn();
